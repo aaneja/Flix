@@ -6,10 +6,7 @@ public class MovieItem {
     public int id;
     public String Title;
     public String Overview;
+    public String UrlPathPosterPotrait;
+    public String UrlPathPosterLandscape;
 
-    public MovieItem(int id, String title, String overview) {
-        this.id = id;
-        Title = title;
-        Overview = overview;
-    }
 }
