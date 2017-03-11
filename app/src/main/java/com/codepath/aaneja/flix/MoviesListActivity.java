@@ -1,10 +1,9 @@
 package com.codepath.aaneja.flix;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListView;
 
 import com.codepath.aaneja.flix.adapters.MovieItemAdapter;
@@ -14,9 +13,7 @@ import com.codepath.aaneja.flix.services.MovieDbFacade;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import static com.codepath.aaneja.flix.R.id.lvItems;
-
-public class MoviesListActivity extends AppCompatActivity {
+public class MoviesListActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
