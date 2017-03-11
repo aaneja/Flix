@@ -6,7 +6,6 @@ public class MovieItem {
     public int id;
     public String Title;
     public String Overview;
-    public String UrlPathPosterPotrait;
-    public String UrlPathPosterLandscape;
+    public String PosterPath;
 
 }
