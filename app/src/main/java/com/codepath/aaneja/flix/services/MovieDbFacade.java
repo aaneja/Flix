@@ -3,12 +3,9 @@ package com.codepath.aaneja.flix.services;
 import com.codepath.aaneja.flix.models.MovieItem;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import info.movito.themoviedbapi.TmdbApi;
-import info.movito.themoviedbapi.TmdbMovies;
-import info.movito.themoviedbapi.model.Collection;
 import info.movito.themoviedbapi.model.MovieDb;
 import info.movito.themoviedbapi.model.core.MovieResultsPage;
 
@@ -30,6 +27,7 @@ public class MovieDbFacade {
 
             MovieItem temp = new MovieItem();
             temp.id = movie.getId();
+            temp.Title = movie.getTitle();
             temp.Overview = movie.getOverview();
             temp.PosterPath = movie.getPosterPath();
             movieItems.add(temp);
