@@ -19,6 +19,7 @@
         android:id="@+id/tvTitle"
         android:gravity="center"
         android:text="A long movie title "
+        android:textColor="@color/colorTitle"
         android:textSize="18sp" />
 
     <ImageView
