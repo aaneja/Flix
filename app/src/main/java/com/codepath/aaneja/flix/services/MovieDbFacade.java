@@ -24,12 +24,12 @@ public class MovieDbFacade {
 
         List<MovieDb> results = pageMovies.getResults();
         for (MovieDb movie : results) {
-
             MovieItem temp = new MovieItem();
             temp.id = movie.getId();
             temp.Title = movie.getTitle();
             temp.Overview = movie.getOverview();
             temp.PosterPath = movie.getPosterPath();
+            temp.BackDropPath = movie.getBackdropPath();
             movieItems.add(temp);
         }
 

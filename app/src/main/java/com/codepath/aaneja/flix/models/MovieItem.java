@@ -7,5 +7,5 @@ public class MovieItem {
     public String Title;
     public String Overview;
     public String PosterPath;
-
+    public String BackDropPath;
 }
