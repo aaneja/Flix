@@ -37,9 +37,9 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories [Direct Imgur link](http://i.imgur.com/EV7f5Ww.gif):
 
-<img src='http://i.imgur.com/EV7f5Ww.gif' title='Potrait and landsapce walkthru' width='' alt='Potrait and landsapce walkthru' />
+<img src='http://i.imgur.com/EV7f5Ww.gif' title='Potrait and landsapce walkthru' width='320' height='569' alt='Potrait and landsapce walkthru' />
 
 GIF created with [FFmpeg](https://ffmpeg.zeranoe.com/builds/).
 
