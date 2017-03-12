@@ -15,6 +15,8 @@ import info.movito.themoviedbapi.model.core.MovieResultsPage;
 
 public class MovieDbFacade {
 
+    public static final String potraitPosterWidth = "w154";
+    public static final String landscapeBackdropWidth = "w300";
     private static final TmdbApi MOVIES = new TmdbApi("a07e22bc18f5cb106bfe4cc1f83ad8ed");
     public static final String BASE_URL = MOVIES.getConfiguration().getBaseUrl();
 

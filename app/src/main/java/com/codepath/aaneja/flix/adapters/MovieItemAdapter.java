@@ -45,7 +45,6 @@ public class MovieItemAdapter extends ArrayAdapter<MovieItem> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_movie_item, parent, false);
 
-            // Lookup view for data population
             TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
             TextView tvOverview = (TextView) convertView.findViewById(R.id.tvOverview);
             ImageView ivMovie = (ImageView) convertView.findViewById(R.id.ivMovie);
@@ -73,15 +72,15 @@ public class MovieItemAdapter extends ArrayAdapter<MovieItem> {
     }
 
     private void setImageView(ImageView ivMovie, MovieItem item, Context context) {
-        String widthToUse = "w154";
+        String widthToUse = MovieDbFacade.potraitPosterWidth;
         String imagePath = item.PosterPath;
         switch (context.getResources().getConfiguration().orientation) {
             case Configuration.ORIENTATION_LANDSCAPE:
-                widthToUse = "w300";
+                widthToUse = MovieDbFacade.landscapeBackdropWidth;
                 imagePath = item.BackDropPath;
                 break;
             case Configuration.ORIENTATION_PORTRAIT:
-                widthToUse = "w154";
+                widthToUse = MovieDbFacade.potraitPosterWidth;
                 imagePath = item.PosterPath;
                 break;
         }
