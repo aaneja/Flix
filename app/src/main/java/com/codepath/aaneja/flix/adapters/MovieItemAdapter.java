@@ -1,6 +1,7 @@
 package com.codepath.aaneja.flix.adapters;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -72,8 +73,20 @@ public class MovieItemAdapter extends ArrayAdapter<MovieItem> {
     }
 
     private void setImageView(ImageView ivMovie, MovieItem item, Context context) {
-        //Based on current orientation get and set the image
-        String imageUri = MOVIE_DB_FACADE.GetImageFullUrl("w154",item.PosterPath);
+        String widthToUse = "w154";
+        String imagePath = item.PosterPath;
+        switch (context.getResources().getConfiguration().orientation) {
+            case Configuration.ORIENTATION_LANDSCAPE:
+                widthToUse = "w300";
+                imagePath = item.BackDropPath;
+                break;
+            case Configuration.ORIENTATION_PORTRAIT:
+                widthToUse = "w154";
+                imagePath = item.PosterPath;
+                break;
+        }
+
+        String imageUri = MOVIE_DB_FACADE.GetImageFullUrl(widthToUse,imagePath);
         Picasso.with(context).load(imageUri).fit().centerCrop().into(ivMovie);
     }
 }
