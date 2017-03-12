@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.codepath.aaneja.flix.R;
 import com.codepath.aaneja.flix.models.MovieItem;
+import com.codepath.aaneja.flix.services.MovieDbFacade;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -20,10 +22,12 @@ import java.util.List;
 
 public class MovieItemAdapter extends ArrayAdapter<MovieItem> {
 
+    private static final MovieDbFacade MOVIE_DB_FACADE = new MovieDbFacade();
+
     private static class ViewHolder {
         TextView title;
         TextView overview;
-        ImageView poster;
+        ImageView image;
     }
 
     public MovieItemAdapter(Context context, int resource, List<MovieItem> objects) {
@@ -43,22 +47,33 @@ public class MovieItemAdapter extends ArrayAdapter<MovieItem> {
             // Lookup view for data population
             TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
             TextView tvOverview = (TextView) convertView.findViewById(R.id.tvOverview);
+            ImageView ivMovie = (ImageView) convertView.findViewById(R.id.ivMovie);
+
             // Populate the data into the template view using the data object
             tvTitle.setText(item.Title);
             tvOverview.setText(item.Overview);
+            setImageView(ivMovie, item, getContext() );
 
             ViewHolder toCache = new ViewHolder();
             toCache.title = tvTitle;
             toCache.overview = tvOverview;
+            toCache.image = ivMovie;
             convertView.setTag(toCache);
         }
         else {
             ViewHolder cached = (ViewHolder) convertView.getTag();
             cached.title.setText(item.Title);
             cached.overview.setText(item.Overview);
+            setImageView(cached.image,item, getContext());
         }
 
         // Return the completed view to render on screen
         return convertView;
+    }
+
+    private void setImageView(ImageView ivMovie, MovieItem item, Context context) {
+        //Based on current orientation get and set the image
+        String imageUri = MOVIE_DB_FACADE.GetImageFullUrl("w154",item.PosterPath);
+        Picasso.with(context).load(imageUri).fit().centerCrop().into(ivMovie);
     }
 }

@@ -16,6 +16,7 @@ import info.movito.themoviedbapi.model.core.MovieResultsPage;
 public class MovieDbFacade {
 
     private static final TmdbApi MOVIES = new TmdbApi("a07e22bc18f5cb106bfe4cc1f83ad8ed");
+    public static final String BASE_URL = MOVIES.getConfiguration().getBaseUrl();
 
     public List<MovieItem> GetNowPlaying() {
         List<MovieItem> movieItems = new ArrayList<>();
@@ -35,4 +36,9 @@ public class MovieDbFacade {
 
         return movieItems;
     }
+
+    public String GetImageFullUrl(String widthPrefix, String urlPath) {
+        return String.format("%s/%s%s",BASE_URL,widthPrefix,urlPath);
+    }
+
 }
