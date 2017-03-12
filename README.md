@@ -2,7 +2,7 @@
 
 **Name of your app** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories [Direct Imgur link](http://i.imgur.com/EV7f5Ww.gif):
+Here's a walkthrough of implemented user stories. [Direct Imgur link](http://i.imgur.com/EV7f5Ww.gif) here since github blocks bigger gifs.
 
 <img src='http://i.imgur.com/EV7f5Ww.gif' title='Potrait and landsapce walkthru' width='320' height='569' alt='Potrait and landsapce walkthru' />
 
