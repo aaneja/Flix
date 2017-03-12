@@ -37,6 +37,9 @@
         android:layout_below="@id/tvTitle"
         android:id="@+id/tvOverview"
         android:layout_alignParentEnd="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:maxLines="3"
         android:layout_toEndOf="@+id/imageViewPoster" />
 
 
