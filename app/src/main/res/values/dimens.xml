@@ -2,5 +2,6 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">5dp</dimen>
     <dimen name="activity_vertical_margin">5dp</dimen>
-    <dimen name="itemImageHieght">150dp</dimen>
+    <dimen name="itemImagePosterHeight">150dp</dimen>
+    <dimen name="imageBackdropHeight">169dp</dimen>
 </resources>

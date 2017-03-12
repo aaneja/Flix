@@ -20,12 +20,12 @@
         android:gravity="center"
         android:text="A long movie title "
         android:textColor="@color/colorTitle"
-        android:textSize="18sp"
+        android:textSize="28sp"
         android:layout_marginBottom="3sp" />
 
     <ImageView
-        android:layout_width="120dp"
-        android:layout_height="@dimen/itemImagePosterHeight"
+        android:layout_width="300dp"
+        android:layout_height="@dimen/imageBackdropHeight"
         app:srcCompat="@mipmap/ic_launcher"
         android:layout_below="@+id/tvTitle"
         android:layout_alignParentStart="true"
@@ -34,7 +34,7 @@
     <TextView
         android:text="A rather long movie overview"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/itemImagePosterHeight"
+        android:layout_height="@dimen/imageBackdropHeight"
         android:layout_below="@id/tvTitle"
         android:id="@+id/tvOverview"
         android:layout_alignParentEnd="true"
@@ -42,7 +42,8 @@
         android:ellipsize="end"
         android:maxLines="8"
         android:layout_toEndOf="@+id/ivMovie"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>
